@@ -1,0 +1,5 @@
+matplotlib==3.5.2
+numpy==1.22.3
+nibabel==3.2.2
+SimpleITK==2.1.1
+DicomRTTool==0.4.2
