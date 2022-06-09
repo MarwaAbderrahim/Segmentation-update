@@ -252,7 +252,7 @@ def main():
             os.mkdir(output)
             convert_nifti_to_dicom(os.path.join(args.output), output)  
             print(f'The segmented dicom is saved in the {cwd}\{output}')
-            print("fffff")
+            
 
 
 if __name__ == '__main__':
