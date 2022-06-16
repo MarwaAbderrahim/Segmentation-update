@@ -204,7 +204,7 @@ def main():
             start_time = time.time()
             test_inputs = test_data["image"].to(device)
             roi_size = (160, 160, 160)
-            sw_batch_size = 4
+            sw_batch_size = 4  # In order to excute the code with "CUDA out of memory" error, update the value of batch_size to 3, 2 or 1. 
             test_data["pred"] = sliding_window_inference(test_inputs, roi_size, sw_batch_size, model)
             test_data = [post_transforms(i) for i in decollate_batch(test_data)]
             test_outputs = from_engine(["pred"])(test_data)
